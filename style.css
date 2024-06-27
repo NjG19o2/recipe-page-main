@@ -1,0 +1,235 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Young Serif', serif; /* Updated font family */
+    font-weight: 400; /* Standard weight */
+    font-style: normal;
+    line-height: 1.6;
+    max-width: 800px; /* Adjusted max-width */
+    margin: auto;
+    padding: 20px;
+    color: #333; /* Adjusted text color */
+    background-color: #f9f9f9; /* Adjusted background color */
+}
+
+.container {
+    background-color: #fff; /* Changed to white */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+.container img {
+    max-width: 100%; /* Ensures the image does not exceed the width of its container */
+    height: auto; /* Maintains the aspect ratio of the image */
+    display: block; /* Removes bottom space below the image */
+    margin: 0 auto; /* Centers the image horizontally if it's smaller than its container */
+    padding: 20px;
+    border-radius: 34px;
+}
+.container h1{
+    margin: 13px 19px;
+    
+}
+.container p{
+    margin: 13px 19px;
+    font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+/* section {
+    margin-bottom: 20px;
+} */
+
+#preparation-time{
+    background-color: hsl(330, 100%, 98%);
+    padding: 7px 0 21px 44px;
+    border-radius: 15px;
+    margin: 22px;
+}
+#preparation-time ul li {
+    margin: 10px;
+    list-style:inside;
+}
+
+#ingredients h2{
+    margin: 22px 38px 17px;
+
+}
+
+
+
+#instructions h2{
+    margin: 22px 38px 17px;
+}
+
+hr{
+    margin: 22px;
+}
+#preparation-time h2 {
+    margin: 11px -3px;
+    color:  hsl(332, 51%, 32%); /* Adjusted section heading color */
+    font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+ ul{
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+#ingredients h2{
+    color:hsl(14, 45%, 36%);
+    font-family: 'Young Serif', serif; /* Updated font family */
+    font-weight: 300; /* Standard weight */
+    font-style: normal;
+    
+}
+#instructions h2{
+    color:hsl(14, 45%, 36%);
+    font-family: 'Young Serif', serif; /* Updated font family */
+    font-weight: 300; /* Standard weight */
+    font-style: normal;
+}
+
+
+/* Hide default list style and add custom colored bullets for Ingredients */
+#ingredients ul {
+    list-style-type: none; /* Removes default bullets */
+    padding-left: 20px; /* Adjusts padding to accommodate custom bullets */
+}
+#ingredients ul li {
+    margin: 10px 30px;
+}
+
+#ingredients ul li::before {
+    content: "•"; /* Custom bullet character */
+    color: hsl(14, 45%, 25%); /* Darker shade for the bullet points */
+    display: inline-block; /* Allows setting width and height */
+    width: 1em; /* Space for the bullet */
+    margin-right: 8px; /* Space between bullet and text */
+    
+}
+
+/* Reset default list style and initialize a counter */
+#instructions ul {
+    list-style-type: none; /* Removes default numbering */
+    counter-reset: step; /* Initializes a counter named 'step' */
+    margin: 2px 45px;
+    padding-left: 0;
+}
+
+#instructions ul li {
+    counter-increment: step; /* Increments the counter for each list item */
+    position: relative;
+    padding-left: 2em;
+}
+
+#instructions ul li::before {
+    content: counter(step) ". "; /* Inserts the counter followed by a period and space */
+    color:hsl(14, 45%, 36%); /* Darker shade for the number points */
+    display: inline-block; /* Allows setting width and height */
+    width: 1.5em; /* Space for the number */
+    margin-right: 8px; /* Space between number and text */
+    position: absolute; /* Positions the number absolutely within the list item */
+    left: 0;
+}
+
+/* section ul, section ol {
+    list-style-type: none;
+    
+} */
+
+section ul li::before, section ul li::before {
+    content: ""; /* Removed bullet points for consistency */
+}
+#nutrition h2{
+    margin: 22px 38px 17px;
+    color:hsl(14, 45%, 36%);
+    font-family: 'Young Serif', serif; /* Updated font family */
+    font-weight: 300; /* Standard weight */
+    font-style: normal;
+}
+#nutrition p{
+    margin: 10px 38px;
+}
+
+section table {
+    width: 100%;
+    border-collapse: collapse;
+    
+}
+
+/* Remove borders from table headers */
+table th {
+    border: none; /* Removes the top border */
+    border-bottom: 1px solid #ddd; /* Adds a bottom border to separate rows */
+    text-align: left; /* Aligns text to the left */
+    padding: 0px 0px 0px 19px;
+}
+
+/* Ensure table data cells have borders */
+table td {
+    border: none; /* Removes all borders */
+    border-bottom: 1px solid #ddd; /* Adds a bottom border */
+    padding: 8px; /* Adds some padding inside each cell for better readability */
+    text-align: left; /* Aligns text to the left */
+    color:hsl(14, 45%, 36%); /* Sets the text color */
+}
+
+/* Remove bottom border from the last row */
+table tr:last-child td {
+    border-bottom: none; /* Removes the bottom border from the last row */
+}
+/* Remove bottom border from the last row */
+table tr:last-child th {
+    border-bottom: none; /* Removes the bottom border from the last row */
+}
+.table1{
+    margin: 10px 27px;
+}
+.attribution {
+    text-align: center;
+    margin-top: 20px;
+    color: #333; /* Adjusted attribution text color */
+}
+/* Responsive Design */
+@media (max-width: 375px) {
+    body {
+        padding: 10px;
+    }
+   .container {
+        padding: 10px;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 1024px) {
+    body {
+        padding: 15px;
+    }
+   .container {
+        padding: 15px;
+    }
+}
+
+@media (min-width: 1025px) {
+    body {
+        padding: 20px;
+        background: hsl(30, 54%, 90%);
+    }
+   .container {
+        padding: 20px;
+    }
+}
